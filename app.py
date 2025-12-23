@@ -10,8 +10,9 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text)
     return text
 
-fake = pd.read_csv("Fake.csv")
-true = pd.read_csv("True.csv")
+fake = pd.read_csv("fake.csv")
+true = pd.read_csv("true.csv")
+
 
 fake["label"] = 0
 true["label"] = 1
@@ -42,3 +43,4 @@ if st.button("Check News"):
         st.success("✅ Real News")
     else:
         st.error("❌ Fake News")
+
